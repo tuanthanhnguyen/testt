@@ -50,6 +50,7 @@ while True:
                     feedback = soc.recv(1024).decode()  # Get feedback about the result
                     if feedback == "GOOD":  # If result was good
                         print("Accepted share", result, "Difficulty", difficulty)
+                        time.sleep(1)
                         break
                     elif feedback == "BAD":  # If result was bad
                         print("Rejected share", result, "Difficulty", difficulty)
