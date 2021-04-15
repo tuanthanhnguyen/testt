@@ -1,3 +1,3 @@
 import subprocess
-subprocess.call("python main.py")
-print("it's working")
+while True:
+  subprocess.call("python3 main.py")
