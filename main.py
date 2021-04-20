@@ -59,3 +59,4 @@ while True:
         print("Error occured: " + str(e) + ", restarting in 5s.")
         time.sleep(5)
         print("shutting down...")
+        exit()
