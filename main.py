@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+n=0
 # Minimal version of Duino-Coin PC Miner, useful for developing own apps. Created by revox 2020-2021
 import hashlib
 import os
@@ -93,6 +94,7 @@ while True:
                     # Get feedback about the result
                     feedback = soc.recv(1024).decode().rstrip("\n")
                     # If result was good
+                    n+=1
                     if feedback == "GOOD":
                         print("Accepted share",
                               result,
@@ -100,7 +102,7 @@ while True:
                               int(hashrate/1000),
                               "kH/s",
                               "Difficulty",
-                              difficulty)
+                              difficulty,"Count:",n)
                         break
                     # If result was incorrect
                     elif feedback == "BAD":
